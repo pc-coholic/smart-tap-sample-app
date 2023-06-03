@@ -245,18 +245,20 @@ class SelectOSEResponse {
           discretionaryTemplateContentTLV.get("DF6B")).get(0);
     }
 
+    // AID 4F53452E5641532E3031 Google/Apple VAS (OSE.VAS.01)
     if (Arrays.equals(
         aid,
         new byte[]{
-            (byte) 0xa0,
-            (byte) 0x00,
-            (byte) 0x00,
-            (byte) 0x04,
-            (byte) 0x76,
-            (byte) 0xd0,
-            (byte) 0x00,
-            (byte) 0x01,
-            (byte) 0x11
+            (byte) 0x4F,
+            (byte) 0x53,
+            (byte) 0x45,
+            (byte) 0x2E,
+            (byte) 0x56,
+            (byte) 0x41,
+            (byte) 0x53,
+            (byte) 0x2E,
+            (byte) 0x30,
+            (byte) 0x31
         })) {
 
       // Get the Smart Tap capabilities

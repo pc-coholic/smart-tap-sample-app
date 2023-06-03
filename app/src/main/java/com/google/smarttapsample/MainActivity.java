@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
       // Check for the Smart Tap AID
       boolean smartTap = false;
       for (byte[] aid : selectOSEResponse.aids) {
+        // AID A000000476D0000111 - Google SmartTap 2.0
         if (Arrays.equals(
             aid,
             new byte[]{
@@ -236,6 +237,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
   private void performSelectSmartTap(IsoDep isoDep, StringBuilder descriptiveText)
       throws Exception {
 
+    // AID A000000476D0000111 - Google SmartTap 2.0
     byte[] response = isoDep.transceive(
         new byte[]{
             (byte) 0x00,
